@@ -8,8 +8,16 @@ const app = express();
 
 
 
-
+//db ko connection ma async use gareko vayera promise return dinxa tesaile ya then catch use gareko.
 connectDB()
+.then(() =>{//then mani callback hunxa
+    app.listen(process.env.PORT || 3000, ()=>{//callback
+        console.log(`Server is listen at port: ${process.env.PORT}`)
+    })
+})
+.catch((err) =>{
+    console.log("MONGO_DB CONNECTION FAILED !", err)
+})
 //efi
 /*(async()=>{
     try {
