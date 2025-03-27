@@ -7,7 +7,6 @@ import express from "express";
 const app = express();
 
 
-
 //db ko connection ma async use gareko vayera promise return dinxa tesaile ya then catch use gareko.
 connectDB()
 .then(() =>{//then mani callback hunxa
