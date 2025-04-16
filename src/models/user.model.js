@@ -1,4 +1,6 @@
 import mongoose, {Schema} from "mongoose"; // {Shema leko reason xai destructure ko lagi ho}
+import dotenv from "dotenv";
+dotenv.config()
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 

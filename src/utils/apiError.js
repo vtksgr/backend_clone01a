@@ -3,7 +3,7 @@ class ApiError extends Error{
         statusCode,
         message= "Something went wrong",
         errors = [],
-        statck = ""
+        stack = ""
     ){
         //default message lai over-ride gareko
         super(message)
@@ -13,8 +13,8 @@ class ApiError extends Error{
         this.message = false;
         this.errors = errors
 
-        if(statck){
-            this.stack = statck
+        if(stack){
+            this.stack = stack
         }else{
             Error.captureStackTrace(this, this.constructor)
         }
