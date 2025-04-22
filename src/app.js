@@ -18,4 +18,12 @@ app.use(express.static("public"));//image files haru save garna lai
 //secure cookie lai client ko brower ma store garna lai
 app.use(cookieParser());
 
-export {app}
+//routes import
+import userRoutes from "./routes/user.routes.js";
+
+//routes declaration .> user.routes.js 
+//http://localhost:3000/api/v1/users/register  
+app.use("/api/v1/users", userRoutes);
+
+
+export default app

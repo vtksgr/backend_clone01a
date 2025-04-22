@@ -1,10 +1,9 @@
-//require('dotenv').config({path: './env'}); [purano style ho]
-
 import dotenv from "dotenv";
-dotenv.config()
 import connectDB from "./db/index.js"
-import express from "express";
-const app = express();
+import app  from "./app.js";
+dotenv.config({
+    path: "./env"
+})
 
 
 //db ko connection ma async use gareko vayera promise return dinxa tesaile ya then catch use gareko.
