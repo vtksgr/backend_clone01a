@@ -1,4 +1,5 @@
-import {v2 as cloudinary} from cloudinary;// bracket vittra ko xai name change gareko matra ho.
+// import {v2 as cloudinary} from cloudinary;// bracket vittra ko xai name change gareko matra ho.
+import cloudinary from "cloudinary";
 import fs from "fs";
 
 // Configuration
@@ -26,4 +27,4 @@ cloudinary.config({
     }
  }
 
- export default uploadOnCloudinary
+ export {uploadOnCloudinary};
